@@ -8,6 +8,10 @@ app.use(cors());
 app.use(express.json())
 app.use(express.static("public"));
 
+app.get("/", (req, res) => {
+    res.sendFile("index.html", { root: "public" });
+});
+
 //Ask Gemini================
 app.post("/ask-gemini", async (req, res) => {
     try {
@@ -63,7 +67,8 @@ app.post("/ask-gemini", async (req, res) => {
 });
 
 //Start Server=============
-app.listen(8000, () => {
-    console.log("Server is running on PORT 8000");
+const PORT = process.env.PORT || 8000;
 
-})
+app.listen(PORT, () => {
+    console.log(`Server is running on PORT ${PORT}`);
+});
