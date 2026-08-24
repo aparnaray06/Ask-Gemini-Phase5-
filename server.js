@@ -20,7 +20,7 @@ app.post("/ask-gemini", async (req, res) => {
         }
 
         //Create Prompt=============
-        const prompt = `give me clean way answers of the ${question} in short`;
+        const prompt = `Give me a clean and short answer to: ${question}`;
 
         //Call Gemini API============
         const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
