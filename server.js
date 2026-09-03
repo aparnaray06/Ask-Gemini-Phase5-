@@ -32,12 +32,14 @@ app.post("/ask-gemini", async (req, res) => {
             contents: prompt
         });
 
+        const answer = response.text;
+
         res.json({
-            answer: response.text
+            answer: answer
         });
 
     } catch (error) {
-        console.error(error);
+        console.log(error);
 
         res.status(500).json({
             error: "Something went wrong"
@@ -45,4 +47,8 @@ app.post("/ask-gemini", async (req, res) => {
     }
 });
 
-export default app;
+const PORT = process.env.PORT || 8000;
+
+app.listen(PORT, () => {
+    console.log(`Server is running on PORT ${PORT}`);
+});
