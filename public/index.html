@@ -9,16 +9,60 @@
 </head>
 
 <body>
+
+    <!-- Decorative elements -->
+    <div class="star star-1">✦</div>
+    <div class="star star-2">✦</div>
+    <div class="star star-3">✦</div>
+
     <main>
-        <h1>Ask Gemini</h1>
-        <input id="input" type="text" placeholder="Ask Gemini">
-        <br>
-        <button id="generateBtn">Generate answer</button>
-        <br>
-        <div id="result">
-            <p id="prompt">Your ans will appear here...</p>
+
+        <!-- Header -->
+        <div class="header">
+            <div class="gemini-icon">✦</div>
+            <h1>Ask Gemini</h1>
         </div>
+
+        <p class="subtitle">
+            Ask anything. Get AI-powered answers instantly.
+        </p>
+
+        <!-- Main Card -->
+        <div class="card">
+
+            <h2>Ask Gemini</h2>
+
+            <input
+                id="input"
+                type="text"
+                placeholder="What is React.js?"
+            >
+
+            <button id="generateBtn">
+                <span>✦</span>
+                Generate answer
+            </button>
+
+            <!-- Result -->
+            <div id="result">
+
+                <div class="answer-header">
+                    <div class="answer-icon">✦</div>
+                    <h3>Answer</h3>
+                </div>
+
+                <p id="prompt">
+                    Your answer will appear here...
+                </p>
+
+            </div>
+
+        </div>
+
     </main>
+
     <script src="script.js"></script>
+
 </body>
+
 </html>
