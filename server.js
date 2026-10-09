@@ -28,7 +28,7 @@ app.post("/ask-gemini", async (req, res) => {
         const prompt = `Give me a clean and short answer to: ${question}`;
 
         const response = await ai.models.generateContent({
-            model: "gemini-2.5-flash",
+            model: "gemini-3.5-flash",
             contents: prompt
         });
 
